@@ -60,6 +60,35 @@
       <hr>  <!-- - - - - - - - - - - - - - - - SEPARADOR - - - - - - - - - - - - - - - - - - - -->
     </div>
 
+    <div class="section-subtitle">
+      <span>Identificador de CEP</span>
+    </div>
+
+    <div class="section-img">
+      <img src="../images/cep1.png">
+    </div>
+
+    <div id="slider-cep">
+      <figure>
+        <img src="../images/cep1.png">
+        <img src="../images/cep2.png">
+        <img src="../images/cep3.png">
+      </figure>
+    </div>
+    <div class="banner-button banner-button--slide">
+      <a v-bind:href="link_cep" target="_blank">{{ portButton }}</a>
+    </div>
+    <div class="section-info section-info--slide">
+      <span>Projeto que teve como finalidade treinar minhas habilidades no consumo de API, no caso, a ferramenta utilizada para fazer a requisição foi outra API nativa do javascript, denominada de “fetch”.</span>
+    </div>
+    <div class="section-acess">
+      <a v-bind:href="link_cep" target="_blank">Clique aqui para visitar o projeto.</a>
+    </div>
+
+    <div class="separator-hr">
+      <hr>  <!-- - - - - - - - - - - - - - - - SEPARADOR - - - - - - - - - - - - - - - - - - - -->
+    </div>
+
     <div class="section-download">
       <span>Clique no ícone para baixar o Portfólio do Programador.</span>
       <div class="download-icon">
@@ -82,7 +111,8 @@
         return {
           portButton: 'Visite o projeto',
           link_maejr: 'https://maejr.netlify.app/',
-          link_atecair: 'https://atecair.netlify.app/'
+          link_atecair: 'https://atecair.netlify.app/',
+          link_cep: 'https://cep-identificador.netlify.app/'
         }
       }
   }
@@ -202,6 +232,48 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+/* - - - - - - - - - - SLIDE DO PROJETO MAEJR - - - - - - - - - - */
+
+  #slider-cep {
+    overflow: hidden;
+  }
+
+  #slider-cep figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 10s slider-maejr infinite;
+  }
+
+  #slider-cep figure img {
+    width: 20%;
+    float: left;
+  }
+
+@keyframes slider-maejr {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
   .section-download {
     background: #1F1F1F;
     padding: 1rem 1rem;
@@ -288,6 +360,10 @@
     }
 
     #slider-atecair {
+      display: none;
+    }
+
+    #slider-cep {
       display: none;
     }
       
